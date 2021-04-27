@@ -36,3 +36,24 @@ function numberConverter(x) {
     return number
 }
 //end of helper
+
+function mainFeature(array) {
+    let result = "";
+    let subRes = "";
+    for (let i = 0; i < array.length; i++) {
+        let str = array[i].toString();
+        for (let y = 0; y < str.length; y++) {
+            subRes += numberConverter(str.charAt(y));
+            if (y === str.length - 1 && i !== array.length - 1) {
+                result += subRes + ",";
+                subRes = "";
+            } else if (y === str.length - 1 && i === array.length - 1) {
+                result += subRes;
+                subRes = "";
+            }
+        }
+    }
+    return result
+}
+
+console.log(mainFeature([0, 564, 10]))
