@@ -1,4 +1,3 @@
-//helper
 function numberConverter(x) {
     let number = null;
     switch (x) {
@@ -32,17 +31,14 @@ function numberConverter(x) {
         case "9":
             number = "Nine";
             break;
-//not a clear edge case but I prefered to handle it because negative numbers are valid integers
         case "-":
             number = "Minus";
             break;
-//prefered to handle a non valid input by throwing an error, istead of returning an unexpected value
         default:
             throw Error (x + "is not a valid integer");
     }
     return number
 }
-//end of helper
 
 function mainFeature(array) {
     let result = "";
