@@ -62,5 +62,3 @@ function mainFeature(array) {
     }
     return result
 }
-
-console.log(mainFeature([-0, 564, -10]))
