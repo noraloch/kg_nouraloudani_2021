@@ -58,3 +58,6 @@ function mainFeature(array) {
     }
     return result
 }
+
+let args = process.argv.slice(2);
+console.log(mainFeature(args));
